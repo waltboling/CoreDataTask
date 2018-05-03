@@ -13,6 +13,7 @@
 		E632C481209A27220064016E /* CoreDataTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E632C47F209A27220064016E /* CoreDataTask.xcdatamodeld */; };
 		E632C483209A27240064016E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E632C482209A27240064016E /* Assets.xcassets */; };
 		E632C486209A27240064016E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E632C484209A27240064016E /* LaunchScreen.storyboard */; };
+		E632C48E209A2B280064016E /* RetrieveDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C48D209A2B280064016E /* RetrieveDataVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E632C482209A27240064016E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E632C485209A27240064016E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E632C487209A27240064016E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E632C48D209A2B280064016E /* RetrieveDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveDataVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				E632C478209A27220064016E /* AppDelegate.swift */,
 				E632C47A209A27220064016E /* ViewController.swift */,
+				E632C48D209A2B280064016E /* RetrieveDataVC.swift */,
 				E632C47C209A27220064016E /* Main.storyboard */,
 				E632C482209A27240064016E /* Assets.xcassets */,
 				E632C484209A27240064016E /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E632C48E209A2B280064016E /* RetrieveDataVC.swift in Sources */,
 				E632C47B209A27220064016E /* ViewController.swift in Sources */,
 				E632C481209A27220064016E /* CoreDataTask.xcdatamodeld in Sources */,
 				E632C479209A27220064016E /* AppDelegate.swift in Sources */,

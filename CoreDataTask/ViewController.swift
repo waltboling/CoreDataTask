@@ -7,19 +7,42 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
+    var textItem = [NSManagedObject]()
 
+    
+    @IBOutlet weak var inputTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func saveButtonWasTapped(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Item", in: context)
+        
+        let userText = NSManagedObject(entity: entity!, insertInto: context)
+        userText.setValue(inputTextField.text, forKey: "itemText")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed save")
+        }
+        
+       
     }
+    
 
-
+    
+    @IBAction func showButton(_ sender: Any) {
+        performSegue(withIdentifier: "toNewView", sender: self)
+    }
 }
 
