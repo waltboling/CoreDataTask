@@ -10,11 +10,8 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-    var textItem = [NSManagedObject]()
-
     
     @IBOutlet weak var inputTextField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +32,7 @@ class ViewController: UIViewController {
         } catch {
             print("Failed save")
         }
-        
-       
     }
-    
-
     
     @IBAction func showButton(_ sender: Any) {
         performSegue(withIdentifier: "toNewView", sender: self)

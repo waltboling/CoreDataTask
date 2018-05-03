@@ -20,8 +20,6 @@ class RetrieveDataVC: UIViewController {
         super.viewDidLoad()
         
         let context = appDelegate.persistentContainer.viewContext
-        //let entity = NSEntityDescription.entity(forEntityName: "Item", in: context)
-
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
         do {
@@ -30,28 +28,7 @@ class RetrieveDataVC: UIViewController {
                 retrieveTextField.text = data.value(forKey:"itemText") as? String
             }
         } catch {
-            print("Failed")
+            print("Failed Retrieval")
         }
-        /*
-        var foundText: String {
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let managedContext = appDelegate.persistentContainer.viewContext
-            
-            do {
-                let results = try managedContext.fetch(fetchRequest)
-                let items = results as! [NSManagedObject]
-            } catch let error as NSError {
-                print("Fetching Error: \(error.userInfo)")
-            }
-            return ""
-        }
-        
-        retrieveTextField.text = foundText
-        */
-        
-        // Do any additional setup after loading the view.
     }
-    
-    
 }
